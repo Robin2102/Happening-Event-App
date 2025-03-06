@@ -23,7 +23,50 @@ In the output, you'll find options to open the app in a
 - [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
 - [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
+
+Platform-Specific Commands
+
+1. Android:
+
+   ```
+   npx expo start --android
+   ```
+2. Ios:
+
+   ```
+   npx expo start --ios
+   ```
+
+
 You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+
+
+## Run Pre-Built Apps on Emulators
+Android Emulator:
+1. Install Android Studio.
+
+2. Open Android Studio → Tools → Device Manager → Create/start a virtual device.
+
+3. Drag the .apk file (from [path/to/apk]) onto the running emulator to install.
+
+iOS Simulator:
+1. Install Xcode (macOS only).
+
+2. Open Xcode → Preferences → Components → Install an iOS simulator.
+
+3. Launch the simulator from Xcode.
+
+4. Drag the iOS build (.ipa or .app file from [path/to/ipa]) onto the simulator.
+(Note: iOS builds may require code signing for installation.)
+
+
+## Generate your own builds via Expo:
+Android APK
+- eas build --platform android --profile androidapk
+
+IOS .app
+- eas build --platform ios --profile simulator
+
 
 ## Get a fresh project
 
